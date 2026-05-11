@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第100回日本細菌学会総会 ― 共催・協賛のご案内</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #b8932f;
+  --gold-light: #d4af37;
+  --gold-pale: #f5ecd0;
+  --deep-green: #1a3a2a;
+  --forest: #2d5a3d;
+  --cream: #faf8f2;
+  --warm-white: #fffef9;
+  --charcoal: #2c2c2c;
+  --text: #3a3a3a;
+  --text-light: #6a6a6a;
+  --border: #e0ddd4;
+  --section-bg: #f7f5ef;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 60px; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--warm-white);
+  line-height: 1.8;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(170deg, rgba(10,20,30,0.82) 0%, rgba(20,35,50,0.78) 40%, rgba(15,30,45,0.80) 100%),
+              url('poster.jpg') center/cover no-repeat;
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 20% 30%, rgba(184,147,47,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 800px at 80% 70%, rgba(184,147,47,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23ffffff' stroke-width='0.3' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+.hero-badge {
+  display: inline-block;
+  border: 1px solid var(--gold-light);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  padding: 0.4rem 1.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  text-transform: uppercase;
+}
+
+.hero-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(5rem, 12vw, 10rem);
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--gold-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+}
+
+.hero-th {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: var(--gold-light);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  opacity: 0; animation: fadeUp 1s ease 0.5s forwards;
+}
+
+.hero-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  opacity: 0; animation: fadeUp 1s ease 0.7s forwards;
+}
+
+.hero-subtitle {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  color: rgba(255,255,255,0.7);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+  opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
+}
+
+.hero-theme {
+  display: inline-block;
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  color: var(--gold-pale);
+  border-top: 1px solid rgba(184,147,47,0.4);
+  border-bottom: 1px solid rgba(184,147,47,0.4);
+  padding: 0.8rem 2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 2.5rem;
+  opacity: 0; animation: fadeUp 1s ease 1.1s forwards;
+}
+
+.hero-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.9rem;
+  opacity: 0; animation: fadeUp 1s ease 1.3s forwards;
+}
+
+.hero-info-item div { text-align: left; }
+.hero-info-label {
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+.hero-link-row {
+  margin-top: 2.5rem;
+  opacity: 0; animation: fadeUp 1s ease 1.5s forwards;
+}
+
+.hero-link {
+  display: inline-block;
+  border: 1px solid var(--gold-light);
+  color: var(--gold-light);
+  padding: 0.7rem 2.5rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: all 0.3s;
+}
+
+.hero-link:hover {
+  background: var(--gold-light);
+  color: var(--deep-green);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== NAV ===== */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--deep-green);
+  border-bottom: 1px solid rgba(184,147,47,0.3);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav::-webkit-scrollbar { height: 0; }
+
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  min-width: max-content;
+  padding: 0 1rem;
+}
+
+.nav a {
+  display: block;
+  padding: 0.85rem 1.3rem;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover, .nav a.active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-light);
+}
+
+.nav a.external::after {
+  content: ' ↗';
+  font-size: 0.65rem;
+  opacity: 0.6;
+}
+
+/* ===== SECTIONS ===== */
+.section { padding: 5rem 2rem; max-width: 960px; margin: 0 auto; }
+.section-alt { background: var(--section-bg); }
+
+.section-header { text-align: center; margin-bottom: 3rem; }
+
+.section-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: 0.1em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+}
+
+/* ===== GREETING ===== */
+.greeting-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.greeting-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem;
+  line-height: 2.2;
+  text-align: justify;
+}
+
+.greeting-text p { margin-bottom: 1.5rem; }
+
+.greeting-sign { text-align: right; margin-top: 2rem; font-family: 'Noto Serif JP', serif; }
+.greeting-sign .name { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.3rem; }
+.greeting-sign .affil { font-size: 0.85rem; color: var(--text-light); }
+
+.greeting-photo img {
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.greeting-photo-caption {
+  margin-top: 0.6rem;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* ===== TABLES ===== */
+.sponsor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.sponsor-table th {
+  background: var(--deep-green);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.sponsor-table td {
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sponsor-table tr:nth-child(even) td { background: var(--section-bg); }
+
+.sponsor-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--charcoal);
+  font-size: 1rem;
+}
+
+/* ===== NOTICE BOX ===== */
+.notice-box {
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+  padding: 1.2rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--charcoal);
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--deep-green);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--forest);
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.btn-download:hover { background: var(--forest); border-color: var(--gold); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--deep-green);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--deep-green);
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.btn-outline:hover { background: var(--deep-green); color: #fff; }
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 2rem;
+}
+
+.contact-card h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+.contact-card a { color: var(--forest); text-decoration: none; border-bottom: 1px solid var(--forest); }
+
+/* ===== BANK INFO ===== */
+.bank-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 2;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--deep-green);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 0.8rem;
+}
+
+.footer-logo {
+  font-family: 'Noto Serif JP', serif;
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.footer-links { margin: 1rem 0; }
+.footer-links a {
+  color: var(--gold-light);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 0.8rem;
+}
+.footer-links a:hover { text-decoration: underline; }
+
+/* ===== SUB-HEADINGS ===== */
+.sub-heading {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+.sub-heading-bar {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--deep-green);
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--gold);
+}
+
+/* ===== DEADLINE HIGHLIGHT ===== */
+.deadline {
+  display: inline-block;
+  background: var(--deep-green);
+  color: var(--gold-light);
+  padding: 0.3rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .greeting-grid { grid-template-columns: 1fr; }
+  .greeting-photo { text-align: center; order: -1; }
+  .greeting-photo img { max-width: 200px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .hero-info { flex-direction: column; gap: 1rem; align-items: center; }
+  .nav a { padding: 0.8rem 0.8rem; font-size: 0.75rem; }
+  .section { padding: 3rem 1.2rem; }
+  .bank-box { padding: 1.2rem 1.5rem; display: block; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-badge">Japanese Society for Bacteriology</div>
+    <div class="hero-number">100</div>
+    <div class="hero-th">The 100th General Meeting</div>
+    <h1 class="hero-title">第100回 日本細菌学会総会</h1>
+    <p class="hero-subtitle">共催・協賛のご案内</p>
+    <div class="hero-theme">大会テーマ「細菌学100年 ― その歩みと展望」</div>
+    <div class="hero-info">
+      <div class="hero-info-item">
+        <div>
+          <div class="hero-info-label">会 期</div>
+          <div>2027年3月4日（木）～6日（土）</div>
+        </div>
+      </div>
+      <div class="hero-info-item">
+        <div>
+          <div class="hero-info-label">会 場</div>
+          <div>有明セントラルタワーホール＆カンファレンス</div>
+        </div>
+      </div>
+      <div class="hero-info-item">
+        <div>
+          <div class="hero-info-label">総会長</div>
+          <div>阿部 章夫（北里大学）</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-link-row">
+      <a href="https://med-gakkai.jp/jsb2027/" target="_blank" class="hero-link">総会公式サイトはこちら ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#greeting">総会長挨拶</a>
+    <a href="#seminar">共催セミナー</a>
+    <a href="#donation">寄付金</a>
+    <a href="#exhibition">企業展示</a>
+    <a href="#ad-program">プログラム集広告</a>
+    <a href="#ad-web">HP広告</a>
+    <a href="#ad-screen">スクリーン広告</a>
+    <a href="#bank">振込先</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="https://med-gakkai.jp/jsb2027/" target="_blank" class="external">総会公式サイト</a>
+  </div>
+</nav>
+
+<!-- ===== GREETING ===== -->
+<section id="greeting">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">President's Message</div>
+      <h2 class="section-title">総会長挨拶</h2>
+    </div>
+    <div class="greeting-grid">
+      <div>
+        <div class="greeting-text">
+          <p>各位</p>
+          <p>謹啓　時下ますますご清栄のこととお慶び申し上げます。</p>
+          <p>さて、このたび2027年3月4日（木）から6日（土）までの3日間、有明セントラルタワー＆カンファレンスにおいて、第100回日本細菌学会総会を開催する運びとなりました。</p>
+          <p>1927年、北里柴三郎先生のもとで産声を上げた本総会は、今回で記念すべき第100回を迎えます。日本の細菌学は、先生の先駆的な志を起点に、感染症対策や免疫学、創薬、環境微生物学へと形を変えながら、今日まで熱く受け継がれてきました。本大会は、この100年の歩みを称えるとともに、次の100年を切り拓く新たなビジョンを提示する、歴史的な節目となります。</p>
+          <p>大会テーマは「細菌学100年 ― その歩みと展望」といたしました。歴史的叡智を礎石とし、産学連携の下、持続可能な未来社会を設計する共創の場を目指してまいります。</p>
+          <p>本会が実り多き大会となりますよう、開催趣旨に格別のご理解を賜り、共催セミナーならびに広告・展示等を含む協賛につきまして、何卒ご高配を賜りますよう謹んでお願い申し上げます。</p>
+        </div>
+        <div class="greeting-sign">
+          <div class="name">総会長　阿部 章夫</div>
+          <div class="affil">北里大学 大村智記念研究所・教授</div>
+        </div>
+      </div>
+      <div class="greeting-photo">
+        <img src="president.jpg" alt="総会長 阿部 章夫">
+        <div class="greeting-photo-caption">総会長　阿部 章夫</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEMINAR ===== -->
+<div class="section-alt">
+<section id="seminar">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Co-sponsored Seminar</div>
+      <h2 class="section-title">共催セミナー募集要項</h2>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text); line-height:2; margin-bottom:1rem;">
+      ランチョンセミナー（共催セミナー）を募集しております。3日間で計12セッション、各会場にて開催いたします。
+    </p>
+
+    <span class="deadline">申込締切：2026年7月3日（金）</span>
+
+    <table class="sponsor-table">
+      <thead>
+        <tr><th>セミナー</th><th>開催日時（予定）</th><th>会場</th><th>共催費（税込）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ランチョンセミナー 1</td><td rowspan="4">3月4日（木）12:00–13:00</td><td>第1会場（316席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 2</td><td>第2会場（227席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 3</td><td>第3会場（189席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 4</td><td>第4会場（162席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 5</td><td rowspan="4">3月5日（金）12:00–13:00</td><td>第1会場（316席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 6</td><td>第2会場（227席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 7</td><td>第3会場（189席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 8</td><td>第4会場（162席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 9</td><td rowspan="4">3月6日（土）12:00–13:00</td><td>第1会場（316席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 10</td><td>第2会場（227席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 11</td><td>第3会場（189席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+        <tr><td>ランチョンセミナー 12</td><td>第4会場（162席）</td><td class="sponsor-price">¥1,100,000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="notice-box" style="margin-top:2rem;">
+      <strong>共催費に含まれるもの：</strong>
+      講演会場費、会場附帯設備・備品、講師控室、メインスクリーン・プロジェクター、PC・周辺機器、PCオペレーター、プログラム集掲載・編集費（一部）、参加登録システム費（一部）など。<br>
+      <strong>別途ご負担：</strong>参加者用弁当、講師交通費・宿泊費・謝金、運営スタッフ、広報印刷物 など。
+    </div>
+
+    <h3 class="sub-heading" style="margin-top:2rem;">スケジュール</h3>
+    <p style="font-size:0.9rem; color:var(--text-light); line-height:2.2;">
+      2026年7月3日 ― 共催セミナー申込締切<br>
+      2026年8月上旬 ― プログラム概要正式決定<br>
+      2026年10月末日 ― 共催費入金締切<br>
+      2027年2月上旬 ― 当日手配関係のご案内
+    </p>
+
+    <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+  </div>
+</section>
+</div>
+
+<!-- ===== DONATION ===== -->
+<section id="donation">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Donation</div>
+      <h2 class="section-title">寄付金募集要項</h2>
+    </div>
+
+    <table class="sponsor-table" style="max-width:600px;">
+      <tbody>
+        <tr><td style="font-weight:600; width:160px;">募金目標額</td><td class="sponsor-price">¥2,500,000</td></tr>
+        <tr><td style="font-weight:600;">募集期間</td><td>2026年3月 〜 2027年3月3日（水）</td></tr>
+        <tr><td style="font-weight:600;">寄付金使途</td><td>第100回日本細菌学会総会の開催費用</td></tr>
+      </tbody>
+    </table>
+
+    <div class="notice-box">
+      共催・協賛いただいた企業様の名称は、以下に<strong>5年間</strong>掲載させていただきます。<br>
+      ① 本総会ホームページ ② 学会本部ホームページ（交渉中） ③ 北里大学ホームページ（交渉中）
+    </div>
+
+    <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+  </div>
+</section>
+
+<!-- ===== EXHIBITION ===== -->
+<div class="section-alt">
+<section id="exhibition">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Exhibition</div>
+      <h2 class="section-title">企業展示 募集要項</h2>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text); line-height:2; margin-bottom:0.5rem;">
+      展示会場：有明セントラルタワーホール＆カンファレンス 4Fロビー<br>
+      出展対象：医療機器・検査機器・医薬品・医療情報機器、システム・書籍 他
+    </p>
+
+    <span class="deadline">申込期日：2027年1月8日（金）</span>
+
+    <table class="sponsor-table">
+      <thead>
+        <tr><th>種類</th><th>募集数</th><th>サイズ</th><th>単価（税込）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>基礎小間</td><td>15小間</td><td>W1.8m × D0.6m × H1.8m</td><td class="sponsor-price">¥220,000</td></tr>
+        <tr><td>アカデミア展示</td><td>2小間</td><td>W1.8m × D0.6m</td><td class="sponsor-price">¥99,000</td></tr>
+        <tr><td>書籍展示</td><td>1社</td><td>机1本×必要本数（最大6本）</td><td class="sponsor-price">当日売上の5%</td></tr>
+        <tr><td>土産物販売</td><td>1団体</td><td>―</td><td class="sponsor-price">当日売上の5%</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub-heading" style="margin-top:2rem;">スケジュール</h3>
+    <p style="font-size:0.9rem; color:var(--text-light); line-height:2.2;">
+      2027年1月8日 ― 申込締切<br>
+      2027年3月3日（水）午後 ― 搬入・設置<br>
+      2027年3月4日（木）～6日（土）― 会期<br>
+      2027年3月6日（土）プログラム終了後 ― 搬出・撤去
+    </p>
+
+    <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+  </div>
+</section>
+</div>
+
+<!-- ===== PROGRAM AD ===== -->
+<section id="ad-program">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Program Book Ad</div>
+      <h2 class="section-title">プログラム集広告 募集要項</h2>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:0.5rem;">
+      第100回日本細菌学会総会 プログラム集（A4版・2,000部発行）
+    </p>
+
+    <span class="deadline">申込・版下送付締切：2027年1月8日（金）</span>
+
+    <table class="sponsor-table">
+      <thead>
+        <tr><th>掲載位置</th><th>仕様</th><th>募集社数</th><th>広告料（税込）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>表4（裏表紙）</td><td>カラー</td><td>1社</td><td class="sponsor-price">¥245,000</td></tr>
+        <tr><td>表2（表紙裏）</td><td>カラー</td><td>1社</td><td class="sponsor-price">¥220,000</td></tr>
+        <tr><td>表3（裏表紙裏）</td><td>カラー</td><td>1社</td><td class="sponsor-price">¥198,000</td></tr>
+        <tr><td>表3対向</td><td>モノクロ</td><td>1社</td><td class="sponsor-price">¥178,000</td></tr>
+        <tr><td>後付・全頁</td><td>モノクロ</td><td>2社</td><td class="sponsor-price">¥110,000</td></tr>
+        <tr><td>後付・半頁</td><td>モノクロ</td><td>6社</td><td class="sponsor-price">¥88,000</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.85rem; color:var(--text-light); margin-top:1rem; line-height:1.8;">
+      広告原稿はデータ（PDF または Adobe Illustrator）をメール添付でお送りください。
+    </p>
+
+    <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+  </div>
+</section>
+
+<!-- ===== WEB AD ===== -->
+<div class="section-alt">
+<section id="ad-web">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Website Ad</div>
+      <h2 class="section-title">ホームページ広告 募集要項</h2>
+    </div>
+
+    <span class="deadline">申込期日：2027年1月8日（金）　データ送付期日：2027年2月5日（金）</span>
+
+    <div style="margin-top:1.5rem;">
+      <h3 class="sub-heading-bar">HP動画広告</h3>
+      <table class="sponsor-table" style="max-width:600px;">
+        <tbody>
+          <tr><td style="font-weight:600; width:140px;">広告料</td><td class="sponsor-price">¥110,000（税込）</td></tr>
+          <tr><td style="font-weight:600;">募集数</td><td>2社</td></tr>
+          <tr><td style="font-weight:600;">動画時間</td><td>10分以内</td></tr>
+          <tr><td style="font-weight:600;">掲載方法</td><td>YouTubeなど公開済み動画のURLを引用</td></tr>
+        </tbody>
+      </table>
+      <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+    </div>
+
+    <div style="margin-top:2.5rem;">
+      <h3 class="sub-heading-bar">HPバナー広告</h3>
+      <table class="sponsor-table" style="max-width:600px;">
+        <tbody>
+          <tr><td style="font-weight:600; width:140px;">広告料</td><td class="sponsor-price">¥44,000（税込）</td></tr>
+          <tr><td style="font-weight:600;">募集数</td><td>6社</td></tr>
+          <tr><td style="font-weight:600;">サイズ</td><td>横230px × 縦40px程度（JPEG/PNG/GIF）</td></tr>
+        </tbody>
+      </table>
+      <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===== SCREEN AD ===== -->
+<section id="ad-screen">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Screen Ad</div>
+      <h2 class="section-title">スクリーン広告 募集要項</h2>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text); line-height:2; margin-bottom:0.5rem;">
+      セッションの幕前・幕間に映写するスクリーン広告スライドです。お申込み順にループを組み、休憩時間に上映いたします。
+    </p>
+
+    <span class="deadline">申込期日：2027年1月8日（金）　データ送付期日：2027年2月5日（金）</span>
+
+    <table class="sponsor-table" style="max-width:600px; margin-top:1rem;">
+      <tbody>
+        <tr><td style="font-weight:600; width:140px;">上映広告料</td><td class="sponsor-price">¥130,000（税込）</td></tr>
+        <tr><td style="font-weight:600;">募集社数</td><td>5社</td></tr>
+        <tr><td style="font-weight:600;">上映期間</td><td>2027年3月4日（木）～6日（土）</td></tr>
+        <tr><td style="font-weight:600;">形式</td><td>PowerPoint（16:9、静止画）または動画（MP4、1分以内）</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.85rem; color:var(--text-light); margin-top:1rem;">音声・音楽を含むスライドも上映可能です。</p>
+
+    <a href="shui.pdf" download="第100回細菌学会_共催協賛趣意書.pdf" class="btn-download">📄 共催協賛趣意書（PDF）ダウンロード</a>
+  </div>
+</section>
+
+<!-- ===== BANK ===== -->
+<div class="section-alt">
+<section id="bank">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Bank Transfer</div>
+      <h2 class="section-title">振込先口座</h2>
+    </div>
+
+    <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:1.5rem; text-align:center;">
+      申込書受領後に請求書を発行いたします。請求書発行まで下記口座へお振込なさらないようお願いいたします。<br>
+      振込手数料は貴社にてご負担いただきますようお願い申し上げます。
+    </p>
+
+    <div style="text-align:center;">
+      <div class="bank-box">
+        <strong style="color:var(--charcoal);">銀行名</strong>：芝信用金庫 白金支店（店番：026）<br>
+        <strong style="color:var(--charcoal);">口座名</strong>：第100回日本細菌学会総会 総会長 阿部 章夫<br>
+        <strong style="color:var(--charcoal);">フリガナ</strong>：ダイヒヤクカイニホンサイキンガツカイソウカイ ソウカイチヨウ アベ アキオ<br>
+        <strong style="color:var(--charcoal);">口座番号</strong>：普通預金 0020012
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-en">Contact</div>
+      <h2 class="section-title">お問い合わせ</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>主催事務局</h3>
+        <p>
+          北里大学 大村智記念研究所<br>
+          細菌感染制御学研究室<br>
+          〒108-8641 東京都港区白金5-9-1<br>
+          TEL：03-5791-6123
+        </p>
+      </div>
+      <div class="contact-card">
+        <h3>運営事務局</h3>
+        <p>
+          株式会社メッド<br>
+          担当：谷本、東、安田、若林<br>
+          〒108-6028 東京都港区港南2-15-1<br>
+          品川インターシティ A棟 28F<br>
+          TEL：03-6717-2790<br>
+          FAX：086-463-5345（本社）<br>
+          E-mail：<a href="mailto:jsb2027@med-gakkai.com">jsb2027@med-gakkai.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:2.5rem;">
+      <a href="https://med-gakkai.jp/jsb2027/" target="_blank" class="btn-outline">総会公式サイトはこちら ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-logo">第100回日本細菌学会総会</div>
+  <p style="font-size:0.75rem;">The 100th General Meeting of Japanese Society for Bacteriology</p>
+  <div class="footer-links">
+    <a href="https://med-gakkai.jp/jsb2027/" target="_blank">総会公式サイト</a>
+    <a href="https://jsbac.org/" target="_blank">日本細菌学会</a>
+  </div>
+  <p style="margin-top:1rem;">&copy; 2026–2027 第100回日本細菌学会総会 All Rights Reserved.</p>
+</footer>
+
+<!-- ===== SCROLL HIGHLIGHT ===== -->
+<script>
+const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+const sections = [];
+navLinks.forEach(a => {
+  const id = a.getAttribute('href').slice(1);
+  const el = document.getElementById(id);
+  if (el) sections.push({ el, a });
+});
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  let current = sections[0];
+  sections.forEach(s => { if (s.el.offsetTop <= y) current = s; });
+  navLinks.forEach(a => a.classList.remove('active'));
+  if (current) current.a.classList.add('active');
+});
+</script>
+
+</body>
+</html>
