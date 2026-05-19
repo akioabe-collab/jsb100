@@ -50,21 +50,14 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('poster.jpg') center bottom / contain no-repeat;
+  background: url('poster.jpg') center center / cover no-repeat;
   z-index: 0;
-}
-
-@media (min-width: 1200px) {
-  .hero-bg {
-    background-size: auto 100%;
-    background-position: center center;
-  }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(170deg, rgba(10,20,30,0.68) 0%, rgba(20,35,50,0.62) 40%, rgba(15,30,45,0.68) 100%);
+  background: linear-gradient(170deg, rgba(10,20,30,0.75) 0%, rgba(20,35,50,0.70) 40%, rgba(15,30,45,0.72) 100%);
   z-index: 1;
 }
 
